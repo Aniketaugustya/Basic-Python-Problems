@@ -1,0 +1,30 @@
+
+contacts = {}
+
+
+def add_contact():
+    name = input("Enter name: ")
+    number = input("Enter number: ")
+    contacts[name] = number
+    print("Contact added.\n")
+
+def view_contacts():
+    if not contacts:
+        print("No contacts found.\n")
+    else:
+        for name, number in contacts.items():
+            print("Name:", name, "Number:", number)
+        print()
+
+while True:
+    print("1. Add Contact")
+    print("2. View Contacts")
+
+    choice = input("Choose an option (1-2): ")
+
+    if choice == "1":
+        add_contact()
+    elif choice == "2":
+        view_contacts()
+    else:
+        print("Invalid choice.\n")
