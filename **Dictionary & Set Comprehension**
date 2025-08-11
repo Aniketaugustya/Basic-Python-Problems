@@ -1,0 +1,5 @@
+import string
+
+text = "class good, hello class."
+words = text.lower().translate(str.maketrans('', '', string.punctuation)).split()
+print({w: words.count(w) for w in set(words) if words.count(w) > 1})
