@@ -1,0 +1,7 @@
+from itertools import combinations
+
+ingredients = ["egg", "milk", "flour", "sugar", "butter"]
+
+result = [c for c in combinations(ingredients, 3) if "egg" in c and "butter" not in c]
+
+print(result)
