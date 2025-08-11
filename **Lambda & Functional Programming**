@@ -1,0 +1,5 @@
+students = [{'name': 'Alice', 'math': 90,'science': 85}, {'name': 'Bob', 'math': 90, 'science': 85}, {'name': 'Charlie', 'math': 80, 'science': 95}]
+
+sorted_students = sorted(students,key=lambda s: (- (s['math'] + s['science']), s['name']))
+
+print(sorted_students)
