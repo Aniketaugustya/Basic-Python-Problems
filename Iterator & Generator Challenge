@@ -1,0 +1,10 @@
+from collections import deque
+
+def moving_average(iterable, n):
+    window = deque(maxlen=n)
+    for num in iterable:
+        window.append(num)
+        if len(window) == n:
+            yield sum(window) / n
+
+list(moving_average([1, 2, 3, 4, 5], 3))
